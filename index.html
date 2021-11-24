@@ -32,24 +32,36 @@
       /* Write CSS Here */
 
       .three-column-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .three-column-grid__expand-two {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
       }
 
       .five-column-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
       }
 
       .center-grid {
+        display: grid;
+        place-items: center
       }
 
       .centered {
+        width: 200px
       }
 
       /* Grid within Grid Section */
+      
       /* Practice re-using classes */
 
       .two-column-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
       }
     </style>
   </head>
@@ -89,12 +101,12 @@
     <div>
       <h2>Grid within Grid #1</h2>
       <div class="container two-column-grid">
-        <div class="box">
+        <div class="box three-column-grid">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
         </div>
-        <div class="box">
+        <div class="box five-column-grid">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
@@ -105,14 +117,14 @@
     </div>
     <div>
       <h2>Grid within Grid #2 (Expansion)</h2>
-      <div class="container">
+      <div class="container three-column-grid__expand-two">
         <div class="box">
           <div class="inner-box"></div>
         </div>
         <div class="box expand">
           <div class="inner-box width-sm"></div>
         </div>
-        <div class="box">
+        <div class="box three-column-grid">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>

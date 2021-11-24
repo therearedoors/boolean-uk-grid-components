@@ -68,15 +68,14 @@
         grid-template-columns: auto auto;
         gap: 5px;
       }
-
+      .two-column-grid-icon {
+        display: grid;
+        grid-template-columns: 1fr 9fr;
+        gap: 5px;
+      }
       #icon {
         border: 2px dotted limegreen;
       }
-      #pattern {
-        width: 1850px;
-        padding-left: 5px
-      }
-
     </style>
   </head>
   <body>
@@ -84,9 +83,9 @@
       fr and % values etc. need to belong to the same rule?-->
     <div>
       <h2>Two Column Grid (Icon Pattern)</h2>
-      <div class="container two-column-grid">
-        <div class="box centered" id= "icon"></div>
-        <div class="box" id= "pattern"></div>
+      <div class="container two-column-grid-icon">
+        <div class="box" id= "icon"></div>
+        <div class="box"></div>
       </div>
     </div>
     <div>
